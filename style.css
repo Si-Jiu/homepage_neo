@@ -11,14 +11,13 @@
 
 .main {
     margin: auto;
-    width: 50%;
-    top: 5%;
+    width: 75%;
 }
 
 .leftPanel {
     position: fixed;
-    padding: 25px;
-    width: 200px;
+    padding-top: 20px;
+    width: 250px;
 }
 
 .leftPanel p {
@@ -26,13 +25,12 @@
 
     padding: 10px;
     padding-top: 5px;
-    padding-left: 10px;
-    padding-left: 40px;
+    padding-left: 30px;
     border-radius: 25px;
 }
 
 .leftPanel img {
-    height: 200px;
+    height: 250px;
     border-radius: 25px;
 }
 
@@ -43,7 +41,8 @@
 
 .rightPanel {
     position: relative;
-    left: calc(250px);
+    left: calc(20%);
+    width: calc(75% - 250px);
 
     font-size: 25px;
     font-weight: 600;
@@ -63,32 +62,30 @@
 
 .btnList {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .btn {
-    width: calc(25%);
+    width: calc(100%);
 
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 20px;
-    margin: 5px;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 8px;
 
-    text-align: left;
+    text-align: center;
     text-decoration: none;
+    font-size: 25px;
 
     background-color: #ffffff75;
     color: #000000;
-    
-    transition: 250ms;
+
+    transition: 300ms;
 }
 
 .btn:hover {
+    letter-spacing: 5px;
     padding-left: auto;
     padding-right: auto;
-    letter-spacing: 2px;
 }
 
 .gradient-text {
