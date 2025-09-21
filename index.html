@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肆鸠的主页 Neo</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <script src="./js/danmaku.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/danmaku.css">
 </head>
 
 <body>
-    <video src="./assets/video/background.mp4" class="background" autoplay muted></video>
+    <video src="./assets/videos/background.mp4" class="background" autoplay muted></video>
     <div class="main">
         <div class="leftPanel">
-            <img src="./assets/imgs/avatar.webp" alt="avatar">
             <p>
-                <span class="title">ℹ 关于我</span><br>
+                <img src="./assets/imgs/avatar.webp" alt="avatar">
+                <span class="title">肆鸠</span>
+                <br>
+                <span class="brief">Ciallo～(∠・ω&lt; )⌒☆</span>
+            </p>
+            <p>
+                <span class="title"><object data="./assets/imgs/info.svg" type="image/svg+xml"></object>关于我</span><br>
+
                 🤔
             </p>
         </div>
+
         <div class="rightPanel">
             <header>
                 <h1>欢迎来到 主页 <span class="gradient-text">Neo</span></h1>
@@ -32,8 +43,85 @@
                 <a href="https://space.bilibili.com/443950222/favlist?fid=3209148922" target="_blank"
                     class="btn">收藏夹</a>
             </div>
+            <h2 class="title">工具 <span class="subtitle">好用的勒</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="https://opencc.byvoid.com/" target="_blank" class="btn">开放中文转换</a>
+                <a href="https://symbolon.pages.dev/" target="_blank" class="btn">BA标题生成器</a>
+                <a href="https://prism.uyanide.com/" target="_blank" class="btn">光棱坦克工厂</a>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <h2 class="title">资源 <span class="subtitle">也许会用到</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="https://www.logo.wine/" target="_blank" class="btn">各种东西Logo</a>
+                <a href="https://downloads.khinsider.com/" target="_blank" class="btn">无损游戏OST</a>
+                <a href="https://flingtrainer.com/" target="_blank" class="btn">风灵月影修改器</a>
+                <a href="https://ba.svdex.moe/" target="_blank" class="btn">碧蓝档案l2d查看器</a>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <h2 class="title">搜图 <span class="subtitle">成为hero的神器</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="https://www.google.com/imghp" target="_blank" class="btn">谷歌图片</a>
+                <a href="https://tineye.com/" target="_blank" class="btn">Tineye</a>
+                <a href="https://soutubot.moe/" target="_blank" class="btn">搜图Bot酱</a>
+                <a href="https://trace.moe/" target="_blank" class="btn">Anime Trace</a>
+                <a href="https://saucenao.com/" target="_blank" class="btn">SauceNAO</a>
+                <a href="https://www.iqdb.org/" target="_blank" class="btn">综合搜图</a>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <h2 class="title">整活 <span class="subtitle">都什么玩意</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="https://akanyi.github.io/Gaynum" target="_blank" class="btn">名字Gay指数计算器</a>
+                <a href="https://lab.magiconch.com/homo" target="_blank" class="btn">恶臭数字论证器</a>
+                <a href="https://www.haraheri5ro.com/kyukurarin/" target="_blank" class="btn">心跳不止生成器</a>
+                <a class="btn" id="cialloBtn">Ciallo～(∠・ω&lt; )⌒☆</a>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <h2 class="title">友链 <span class="subtitle">兄弟们的网站</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="http://mumuserver.com" target="_blank" class="btn">mumu的中转站</a>
+                <a href="http://charliehome.xx.kg" target="_blank" class="btn">Charlie的主页</a>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <h2 class="title">资料 <span class="subtitle">看到什么加什么</span></h2>
+            <br>
+            <div class="btnList">
+                <a href="https://www.bilibili.com/video/BV1CWb5zNE8w/" target="_blank" class="btn">VSCode&Mingw入坑教程</a>
+                <a href="https://www.bilibili.com/video/BV1YXtZzgE2r/" target="_blank" class="btn">VSCode&Mingw退坑教程</a>
+                <a href="https://www.ruanyifeng.com/blogimg/asset/201105/free_software_licenses.png" target="_blank"
+                    class="btn">一张图看懂开源协议</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const playBtn = document.getElementById('cialloBtn');
+            var cialloIndex = 0;
+            playBtn.addEventListener('click', function () {
+                const music = new Audio(`./assets/sounds/ciallo${cialloIndex}.wav`);
+                music.volume = 0.2;
+                music.play();
+                cialloIndex++;
+                if (cialloIndex > 2) {
+                    cialloIndex = 0;
+                }
+                createDanmaku([
+                    'Ciallo～(∠・ω< )⌒★',
+                    'Ciallo～(∠・ω< )⌒★',
+                    'Ciallo～(∠・ω< )⌒★',
+                    'Ciallo～(∠・ω< )⌒★',
+                    '恰喽～(∠・ω< )⌒★',
+                    '恰喽～(∠・ω< )⌒★',
+                    '柚子厨真恶心🤮',
+                ]);
+            });
+        });
+    </script>
 </body>
 
 </html>

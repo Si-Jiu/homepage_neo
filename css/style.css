@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(151, 193, 252);
+}
+
 .background {
     position: fixed;
     top: 0;
@@ -16,22 +20,27 @@
 
 .leftPanel {
     position: fixed;
-    padding-top: 20px;
     width: 250px;
 }
 
 .leftPanel p {
     background-color: #ffffff75;
+    /* backdrop-filter: blur(5px); */
 
     padding: 10px;
-    padding-top: 5px;
-    padding-left: 30px;
     border-radius: 25px;
+
+    text-align: center;
 }
 
 .leftPanel img {
-    height: 250px;
+    height: 225px;
     border-radius: 25px;
+}
+
+.leftPanel object {
+    position: relative;
+    top: 2.5px;
 }
 
 .leftPanel .title {
@@ -39,10 +48,14 @@
     font-weight: 600;
 }
 
+.leftPanel .brief {
+    color: gray;
+}
+
 .rightPanel {
     position: relative;
-    left: calc(20%);
-    width: calc(75% - 250px);
+    left: calc(250px + 25px);
+    width: calc(100% - 250px);
 
     font-size: 25px;
     font-weight: 600;
@@ -66,7 +79,7 @@
 }
 
 .btn {
-    width: calc(100%);
+    /* width: calc(25%); */
 
     padding: 20px;
     border-radius: 25px;
@@ -83,17 +96,16 @@
 }
 
 .btn:hover {
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     padding-left: auto;
     padding-right: auto;
 }
 
 .gradient-text {
-    background: linear-gradient(
-        to right,
-        #0065ff,
-        #00ffff
-    ); /*设置渐变的方向从左到右 颜色从ff0000到ffff00*/
-    background-clip: text; /*将设置的背景颜色限制在文字中*/
-    -webkit-text-fill-color: transparent; /*给文字设置成透明*/
+    background: linear-gradient(to right, #0065ff, #00ffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 1100px) {
 }
