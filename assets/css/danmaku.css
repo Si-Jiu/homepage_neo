@@ -1,0 +1,17 @@
+@keyframes moveDanmaku {
+    0% {
+        transform: translateX(100vw); /* 从右侧开始 */
+    }
+    100% {
+        transform: translateX(-50vw); /* 向左滚动至完全消失 */
+    }
+}
+
+/*  弹幕效果  */
+.danmaku {
+    position: fixed;
+    white-space: nowrap;
+    opacity: 1;
+    animation: moveDanmaku linear forwards;
+    user-select: none;
+}

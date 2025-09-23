@@ -24,7 +24,7 @@ function createDanmaku(danmakuTexts) {
     danmaku.style.color = color;
 
     // 随机纵向位置
-    const topPosition = Math.min(Math.floor(Math.random() * window.innerHeight), window.innerHeight - 80);
+    const topPosition = Math.min(Math.floor(Math.random() * window.innerHeight), window.innerHeight - 20);
     danmaku.style.top = `${topPosition}px`;
 
     // 随机动画速度
