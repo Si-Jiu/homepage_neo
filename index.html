@@ -8,16 +8,17 @@
 
     <script src="./assets/js/ciallo.js"></script>
     <script src="./assets/js/danmaku.js"></script>
-    <script src="./assets/js/getStats.js"></script>
-    <script defer src="https://cloud.umami.is/script.js"
-        data-website-id="b82c7090-848f-4d4d-a053-f9a2f5f79474"></script>
+    <script src="./assets/js/steamStats.js"></script>
+    <script src="./assets/js/siteStats.js"></script>
+    <!-- <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="b82c7090-848f-4d4d-a053-f9a2f5f79474"></script> -->
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/mBtns.css">
     <link rel="stylesheet" href="./assets/css/danmaku.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/fa6-all.min.css">
 </head>
 
 <body>
@@ -31,9 +32,8 @@
                 <span class="brief">Ciallo～(∠・ω&lt; )⌒☆</span>
                 <br>
                 <br>
-                <span class="boardtext">Steam在线状态：<span id="steamOnline">-</span></span>
-                <a id="steamAPI" class="boardtext" target="_blank"></a>
-                <br>
+                <span class="boardtext">Steam状态：<span id="steamOnline">-</span></span><br>
+                <a id="playingGame" class="boardtext" target="_blank"></a>
                 <br>
                 <a href="https://github.com/Si-Jiu" target="_blank" class="mBtn" id="Github"><i
                         class="fa-brands fa-github"></i></a>
@@ -43,20 +43,19 @@
                         class="fa-brands fa-steam"></i></a>
             </div>
             <div class="card">
-                <span class="title"><i class="fa fa-info"></i>关于我</span><br>
-                Nothing here~
+                <span class="title"><i class="fa-solid fa-circle-info"></i> 关于我</span><br>
+                一个每天不知道在干些什么的畜中牲<br>
             </div>
-
-
         </div>
 
         <div class="rightPanel">
             <h1>欢迎来到 主页 <span class="gradient-text">Neo</span> 版</h1>
-            <span class="title">公告栏</span>
+            <span class="title"><i class="fa-solid fa-bullhorn"></i>公告栏</span>
             <div class="background board">
-                正式版已发布~
+                主页<span class="gradient-text">Neo</span>版现已震撼发布！<s>并非震撼</s><br>
+                <span class="gradient-text">Neo</span>版基于旧版主页的架构进行重写，带来更加美观的设计
             </div>
-            <span class="title">我的</span>
+            <span class="title"><i class="fa-solid fa-user"></i>我的</span>
             <br>
             <div class="background">
                 <a href="https://legacy.sijiu49.us.kg/" target="_blank" class="btn">旧版主页</a>
@@ -65,7 +64,7 @@
                 <a href="https://space.bilibili.com/443950222/favlist?fid=3209148922" target="_blank"
                     class="btn">收藏夹</a>
             </div>
-            <span class="title">工具<span class="sub">好用的勒</span>
+            <span class="title"><i class="fa-solid fa-wrench"></i>工具<span class="sub">好用的勒</span>
             </span>
             <br>
             <div class="background">
@@ -74,18 +73,17 @@
                 <a href="https://prism.uyanide.com/" target="_blank" class="btn">光棱坦克工厂</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">资源<span class="sub">也许会用到</span>
+            <span class="title"><i class="fa-solid fa-warehouse"></i>资源<span class="sub">也许会用到</span>
             </span>
             <br>
             <div class="background">
                 <a href="https://www.logo.wine/" target="_blank" class="btn">各种东西Logo</a>
                 <a href="https://downloads.khinsider.com/" target="_blank" class="btn">无损游戏OST</a>
                 <a href="https://flingtrainer.com/" target="_blank" class="btn">风灵月影修改器</a>
-                <br>
                 <a href="https://ba.svdex.moe/" target="_blank" class="btn">碧蓝档案l2d查看器</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">搜图<span class="sub">成为hero的神器</span></span>
+            <span class="title"><i class="fa-solid fa-images"></i>搜图<span class="sub">成为hero的神器</span></span>
             <br>
             <div class="background">
                 <a href="https://www.google.com/imghp" target="_blank" class="btn">谷歌图片</a>
@@ -96,7 +94,7 @@
                 <a href="https://www.iqdb.org/" target="_blank" class="btn">综合搜图</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">整活<span class="sub">都什么玩意</span>
+            <span class="title"><i class="fa-solid fa-face-grin-tongue-wink"></i>整活<span class="sub">都什么玩意</span>
             </span>
             <br>
             <div class="background">
@@ -106,15 +104,16 @@
                 <a class="btn" id="cialloBtn" style="user-select: none;">Ciallo～(∠・ω&lt; )⌒☆</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">友链<span class="sub">兄弟们的网站</span>
+            <span class="title"><i class="fa-solid fa-user-group"></i>友链<span class="sub">兄弟们的网站</span>
             </span>
             <br>
             <div class="background">
                 <a href="http://mumuserver.com" target="_blank" class="btn">mumu的中转站</a>
                 <a href="http://charliehome.xx.kg" target="_blank" class="btn">Charlie的主页</a>
+                <a href="https://blog.lhpgmc.cn/" target="_blank" class="btn">lxh的博客</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">资料<span class="sub">看到什么加什么</span>
+            <span class="title"><i class="fa-solid fa-book-bookmark"></i>资料<span class="sub">看到什么加什么</span>
             </span>
             <br>
             <div class="background">
@@ -124,29 +123,40 @@
                     class="btn">一张图看懂开源协议</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">更新日志</span>
+            <span class="title"><i class="fa-solid fa-pen"></i>更新日志</span>
             <br>
             <div class="background board">
                 <div>
-                    <div class="date">23/9/2025</div>
+                    <div class="front">23/9/2025<br>v1.0.0</div>
                     <div class="text">
                         正式版发布~
                     </div>
                 </div>
-                <!-- <br>
+                <hr>
                 <div>
-                    <div class="date">Date</div>
+                    <div class="front">14/9/2025<br>V1.1.0</div>
+
+                    <div class="text">
+                        新增：赞助列表<br>
+                        新增：标题前面加入了图标<br>
+                        修复：按钮大概率不会再抽风了<br>
+                        <br>
+                    </div>
+                </div>
+                <!-- <hr>
+                <div>
+                    <div class="front">front<br>Version</div>
                     <div class="text">
                         Text<br>
                     </div>
                 </div> -->
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">赞助名单<span class="sub">阿里嘎多</span></span>
+            <span class="title"><i class="fa-solid fa-wallet"></i>赞助名单<span class="sub">阿里嘎多</span></span>
             <br>
             <div class="background board">
                 <div>
-                    <div class="date">22/08/2025</div>
+                    <div class="front">22/08/2025</div>
                     <div class="text">
                         史尚 $0.2 巨款<br>
                         mumu学长 ￥10 巨巨巨款<br>
@@ -154,59 +164,79 @@
                         学长们的恩情还不完✋😭🤚
                     </div>
                 </div>
-                <br>
+                <hr>
                 <div>
-                    <div class="date">27/08/2025</div>
+                    <div class="front">27/08/2025</div>
                     <div class="text">
                         Raslo $10 巨巨巨款<br>
                     </div>
                 </div>
-                <br>
+                <hr>
                 <div>
-                    <div class="date">02/09/2025</div>
+                    <div class="front">02/09/2025</div>
                     <div class="text">
                         Raslo 两个纸片人小铁片<br>
                     </div>
                 </div>
-                <br>
+                <hr>
                 <div>
-                    <div class="date">06/09/2025</div>
+                    <div class="front">06/09/2025</div>
                     <div class="text">
                         备注是“逆蝶” ￥11.45 巨巨巨款<br>
                     </div>
                 </div>
-                <!-- <br>
+                <!-- <hr>
                 <div>
-                    <div class="date">Date</div>
+                    <div class="front">front</div>
                     <div class="text">
                         Text<br>
                     </div>
                 </div> -->
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">鸣谢列表</span>
+            <span class="title"><i class="fa-solid fa-comment-dollar"></i>赞助我</span>
             <br>
             <div class="background board">
-                <div class="date">API反代</div>
+                <div class="qrCode">
+                    可以扫红包码扫到多少赞助多少，自己用也行<br>
+                    <div class="front">二维码</div><br>
+                    <img src="./assets/imgs/alipay.webp" alt="alipay">
+                    <img src="./assets/imgs/alipayDiscount.webp" alt="alipayDiscount">
+                    <img src="./assets/imgs/alipayhk.webp" alt="alipayHK">
+                    <img src="./assets/imgs/wechat.webp" alt="wechat">
+                </div>
+                <div>
+                    <div class="front">爱发电</div>
+                    <div class="text">
+                        <a href="https://afdian.com/a/thatsijiu49">
+                            <img src="./assets/imgs/afd.svg" alt="afd">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <span class="title"><i class="fa-solid fa-person-praying"></i>鸣谢列表</span>
+            <br>
+            <div class="background board">
+                <div class="front">API反代</div>
                 <div class="text">Charlie</div>
                 <br>
-                <div class="date">部分技术支持</div>
+                <div class="front">部分技术支持</div>
                 <div class="text">Charlie</div>
                 <br>
-                <div class="date">原主页代码</div>
+                <div class="front">旧版主页代码</div>
                 <div class="text">Mumu</div>
                 <!-- <br>
-                    <div class="date">Date</div>
+                    <div class="front">front</div>
                     <div class="text">
                         Text<br>
-                    </div>
-                     -->
+                    </div> -->
             </div>
         </div>
     </div>
     <br>
     <footer>
-        <i class="fa fa-eye"></i><span id="site-stats-display">访问量加载中……</span>
+        <i class="fa fa-eye"></i> <span id="site-stats-display">访问量加载中……</span>
     </footer>
 </body>
 

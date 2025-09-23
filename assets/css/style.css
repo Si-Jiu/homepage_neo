@@ -4,13 +4,16 @@ body {
 
 i {
     padding: 5px;
+    vertical-align: middle;
 }
 
-img.svg {
-    height: 1em;
-    width: auto;
-    margin-right: 5px;
-    vertical-align: middle;
+.fa-circle-info {
+    padding-top: 0px;
+}
+
+a#playingGame {
+    color: #000;
+    text-decoration: transparent;
 }
 
 .backgroundVid {
@@ -35,8 +38,8 @@ img.svg {
     position: fixed;
     width: calc(15%);
 
-    font-size: medium;
-    font-weight: 500;
+    font-size: larger;
+    font-weight: normal;
 }
 
 .leftPanel .card {
@@ -57,7 +60,7 @@ img.svg {
 
 .leftPanel .title {
     font-size: x-large;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .leftPanel .brief {
@@ -70,13 +73,13 @@ img.svg {
     width: calc(75%);
     top: calc(15px);
 
-    font-size: 25px;
-    font-weight: 600;
+    font-size: x-large;
+    font-weight: normal;
 }
 
 .rightPanel h1 {
     font-size: 60px;
-    font-weight: 800;
+    font-weight: bolder;
     height: fit-content;
 }
 
@@ -92,6 +95,9 @@ img.svg {
 
     background-color: #f0f0f075;
 }
+.rightPanel .title i {
+    padding-bottom: 10px;
+}
 
 .rightPanel .title .sub {
     font-size: 30px;
@@ -100,20 +106,27 @@ img.svg {
 }
 
 .rightPanel .board {
-    font-weight: normal;
+    width: calc(100% - 25px * 2);
     padding: 25px;
+    vertical-align: middle;
+}
+
+.rightPanel .board .qrCode img {
+    width: calc(24%);
 }
 
 .rightPanel .board .text {
     display: inline-block;
     vertical-align: middle;
+    padding-top: 3px;
     padding-left: 5px;
     border-left: 5px #000000;
 }
 
-.rightPanel .board .date {
+.rightPanel .board .front {
     display: inline-block;
     vertical-align: top;
+    text-align: right;
     font-weight: bolder;
     font-size: xx-large;
 }
@@ -146,7 +159,7 @@ img.svg {
 }
 
 .btn:hover {
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     background-color: #f0f0f0;
     color: #000000;
     padding-left: auto;
@@ -172,6 +185,10 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
+    a#playingGame {
+        color: #fff;
+    }
+
     .leftPanel {
         color: #fff;
     }
