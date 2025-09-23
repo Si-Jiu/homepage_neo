@@ -1,8 +1,19 @@
+body {
+    margin: 0;
+}
+
 i {
     padding: 5px;
 }
 
-.background {
+img.svg {
+    height: 1em;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.backgroundVid {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,30 +39,20 @@ i {
     font-weight: 500;
 }
 
-.leftPanel p {
+.leftPanel .card {
     background-color: #ffffff55;
-    /* backdrop-filter: blur(5px); */
+    backdrop-filter: blur(5px);
 
-    padding: 10px;
+    padding: 15px;
     border-radius: 25px;
+    margin-bottom: 15px;
 
     text-align: center;
 }
 
-.leftPanel span {
-    display: inline-flex;
-    align-items: center;
-}
-
-.leftPanel img {
+.leftPanel .avatar {
     width: calc(100%);
     border-radius: 25px;
-}
-
-.leftPanel img.svg {
-    height: 1em;
-    width: auto;
-    vertical-align: middle;
 }
 
 .leftPanel .title {
@@ -95,11 +96,29 @@ i {
 .rightPanel .title .sub {
     font-size: 30px;
     font-weight: 700;
+    margin-left: 5px;
 }
 
-.btnList {
-    display: block;
-    float: left;
+.rightPanel .board {
+    font-weight: normal;
+    padding: 25px;
+}
+
+.rightPanel .board .text {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+    border-left: 5px #000000;
+}
+
+.rightPanel .board .date {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.background {
     width: 100%;
     height: auto;
     backdrop-filter: blur(5px);
@@ -109,7 +128,7 @@ i {
 }
 
 .btn {
-    /* width: calc(25%); */
+    /* width: auto; */
     display: inline-block;
 
     padding: 20px;
@@ -127,7 +146,9 @@ i {
 }
 
 .btn:hover {
-    letter-spacing: 4px;
+    letter-spacing: 1px;
+    background-color: #f0f0f0;
+    color: #000000;
     padding-left: auto;
     padding-right: auto;
 }
@@ -142,7 +163,7 @@ footer {
     position: relative;
     left: 0;
     bottom: 0;
-    width: 100vw;
+    /* width: calc(100vw); */
     text-align: center;
     background-color: #10101050;
 }
@@ -151,7 +172,11 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
-    .leftPanel p {
+    .leftPanel {
+        color: #fff;
+    }
+
+    .leftPanel .card {
         background-color: #10101025;
     }
 
@@ -159,16 +184,24 @@ footer {
         color: #aaa;
     }
 
+    .rightPanel {
+        color: #fff;
+    }
+
     .rightPanel .title {
         background-color: #10101025;
     }
 
-    .btnList {
+    .background {
         background-color: #10101025;
     }
 
     .btn {
         background-color: #25252525;
         color: white;
+    }
+
+    footer {
+        color: #fff;
     }
 }

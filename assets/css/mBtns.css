@@ -1,0 +1,31 @@
+.mBtn {
+    color: #000000;
+    background-color: #ffffff55;
+    font-size: x-large;
+    border-radius: 12.5px;
+    padding: 0 5px 5px 5px;
+    margin: 5px;
+
+    transition: 250ms;
+}
+
+.mBtn#Github:hover {
+    color: #fff;
+    background-color: #000000;
+}
+
+.mBtn#Bilibili:hover {
+    color: rgb(0, 161, 214);
+    background-color: rgb(251, 114, 153);
+}
+
+.mBtn#Steam:hover {
+    background: linear-gradient(to right, #121b2e, #0179ad);
+}
+
+@media (prefers-color-scheme: dark) {
+    .mBtn {
+        color: #fff;
+        background-color: #10101050;
+    }
+}

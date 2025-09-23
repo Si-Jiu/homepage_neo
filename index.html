@@ -8,69 +8,86 @@
 
     <script src="./assets/js/ciallo.js"></script>
     <script src="./assets/js/danmaku.js"></script>
+    <script src="./assets/js/getStats.js"></script>
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="b82c7090-848f-4d4d-a053-f9a2f5f79474"></script>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mBtns.css">
     <link rel="stylesheet" href="./assets/css/danmaku.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
 </head>
 
 <body>
-    <video src="./assets/videos/background.mp4" class="background" autoplay muted></video>
+    <video src="./assets/videos/background.mp4" class="backgroundVid" autoplay muted loop></video>
     <div class="main">
         <div class="leftPanel">
-            <p>
-                <img src="./assets/imgs/avatar.webp" alt="avatar">
+            <div class="card">
+                <img src="./assets/imgs/avatar.webp" alt="avatar" class="avatar">
                 <span class="title">肆鸠</span>
                 <br>
                 <span class="brief">Ciallo～(∠・ω&lt; )⌒☆</span>
                 <br>
                 <br>
-            </p>
-            <p>
-                <span class="title"><img src="./assets/imgs/info.svg" alt="visits-icon" class="svg">关于我</span>
+                <span class="boardtext">Steam在线状态：<span id="steamOnline">-</span></span>
+                <a id="steamAPI" class="boardtext" target="_blank"></a>
                 <br>
-                🤔
-            </p>
+                <br>
+                <a href="https://github.com/Si-Jiu" target="_blank" class="mBtn" id="Github"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://space.bilibili.com/443950222" target="_blank" class="mBtn" id="Bilibili"><i
+                        class="fa-brands fa-bilibili"></i></a>
+                <a href="https://steamcommunity.com/id/SiJiu49" target="_blank" class="mBtn" id="Steam"><i
+                        class="fa-brands fa-steam"></i></a>
+            </div>
+            <div class="card">
+                <span class="title"><i class="fa fa-info"></i>关于我</span><br>
+                Nothing here~
+            </div>
+
+
         </div>
 
         <div class="rightPanel">
-            <h1>欢迎来到 主页 <span class="gradient-text">Neo</span></h1>
-            <br>
-            [///🚧 施工进行中 🚧///]
-            <br>
-
+            <h1>欢迎来到 主页 <span class="gradient-text">Neo</span> 版</h1>
+            <span class="title">公告栏</span>
+            <div class="background board">
+                正式版已发布~
+            </div>
             <span class="title">我的</span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://sijiu49.us.kg/" target="_blank" class="btn">旧版主页</a>
-                <br>
                 <a href="https://blog.sijiu49.us.kg/" target="_blank" class="btn">博客</a>
                 <a href="https://steam-review.sijiu49.us.kg/" target="_blank" class="btn">游戏评测生成器</a>
-                <br>
                 <a href="https://space.bilibili.com/443950222/favlist?fid=3209148922" target="_blank"
                     class="btn">收藏夹</a>
             </div>
             <span class="title">工具<span class="sub">好用的勒</span>
-            </span class="title">
+            </span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://opencc.byvoid.com/" target="_blank" class="btn">开放中文转换</a>
                 <a href="https://symbolon.pages.dev/" target="_blank" class="btn">BA标题生成器</a>
                 <a href="https://prism.uyanide.com/" target="_blank" class="btn">光棱坦克工厂</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">资源<span class="sub">也许会用到</span class="sub">
-            </span class="title">
+            <span class="title">资源<span class="sub">也许会用到</span>
+            </span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://www.logo.wine/" target="_blank" class="btn">各种东西Logo</a>
                 <a href="https://downloads.khinsider.com/" target="_blank" class="btn">无损游戏OST</a>
                 <a href="https://flingtrainer.com/" target="_blank" class="btn">风灵月影修改器</a>
+                <br>
                 <a href="https://ba.svdex.moe/" target="_blank" class="btn">碧蓝档案l2d查看器</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
             <span class="title">搜图<span class="sub">成为hero的神器</span></span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://www.google.com/imghp" target="_blank" class="btn">谷歌图片</a>
                 <a href="https://tineye.com/" target="_blank" class="btn">Tineye</a>
                 <a href="https://soutubot.moe/" target="_blank" class="btn">搜图Bot酱</a>
@@ -79,42 +96,120 @@
                 <a href="https://www.iqdb.org/" target="_blank" class="btn">综合搜图</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">整活<span class="sub">都什么玩意</span class="sub">
-            </span class="title">
+            <span class="title">整活<span class="sub">都什么玩意</span>
+            </span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://akanyi.github.io/Gaynum" target="_blank" class="btn">名字Gay指数计算器</a>
                 <a href="https://lab.magiconch.com/homo" target="_blank" class="btn">恶臭数字论证器</a>
                 <a href="https://www.haraheri5ro.com/kyukurarin/" target="_blank" class="btn">心跳不止生成器</a>
                 <a class="btn" id="cialloBtn" style="user-select: none;">Ciallo～(∠・ω&lt; )⌒☆</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">友链<span class="sub">兄弟们的网站</span class="sub">
-            </span class="title">
+            <span class="title">友链<span class="sub">兄弟们的网站</span>
+            </span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="http://mumuserver.com" target="_blank" class="btn">mumu的中转站</a>
                 <a href="http://charliehome.xx.kg" target="_blank" class="btn">Charlie的主页</a>
             </div>
             <!-- ---------------------------------------------------------------------- -->
-            <span class="title">资料<span class="sub">看到什么加什么</span class="sub">
-            </span class="title">
+            <span class="title">资料<span class="sub">看到什么加什么</span>
+            </span>
             <br>
-            <div class="btnList">
+            <div class="background">
                 <a href="https://www.bilibili.com/video/BV1CWb5zNE8w/" target="_blank" class="btn">VSCode&Mingw入坑教程</a>
                 <a href="https://www.bilibili.com/video/BV1YXtZzgE2r/" target="_blank" class="btn">VSCode&Mingw退坑教程</a>
                 <a href="https://www.ruanyifeng.com/blogimg/asset/201105/free_software_licenses.png" target="_blank"
                     class="btn">一张图看懂开源协议</a>
             </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <span class="title">更新日志</span>
+            <br>
+            <div class="background board">
+                <div>
+                    <div class="date">23/9/2025</div>
+                    <div class="text">
+                        正式版发布~
+                    </div>
+                </div>
+                <!-- <br>
+                <div>
+                    <div class="date">Date</div>
+                    <div class="text">
+                        Text<br>
+                    </div>
+                </div> -->
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <span class="title">赞助名单<span class="sub">阿里嘎多</span></span>
+            <br>
+            <div class="background board">
+                <div>
+                    <div class="date">22/08/2025</div>
+                    <div class="text">
+                        史尚 $0.2 巨款<br>
+                        mumu学长 ￥10 巨巨巨款<br>
+                        胡做学长 ￥26.66 巨巨巨巨巨巨款<br>
+                        学长们的恩情还不完✋😭🤚
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="date">27/08/2025</div>
+                    <div class="text">
+                        Raslo $10 巨巨巨款<br>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="date">02/09/2025</div>
+                    <div class="text">
+                        Raslo 两个纸片人小铁片<br>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="date">06/09/2025</div>
+                    <div class="text">
+                        备注是“逆蝶” ￥11.45 巨巨巨款<br>
+                    </div>
+                </div>
+                <!-- <br>
+                <div>
+                    <div class="date">Date</div>
+                    <div class="text">
+                        Text<br>
+                    </div>
+                </div> -->
+            </div>
+            <!-- ---------------------------------------------------------------------- -->
+            <span class="title">鸣谢列表</span>
+            <br>
+            <div class="background board">
+                <div class="date">API反代</div>
+                <div class="text">Charlie</div>
+                <br>
+                <div class="date">部分技术支持</div>
+                <div class="text">Charlie</div>
+                <br>
+                <div class="date">原主页代码</div>
+                <div class="text">Mumu</div>
+                <!-- <br>
+                    <div class="date">Date</div>
+                    <div class="text">
+                        Text<br>
+                    </div>
+                     -->
+            </div>
         </div>
     </div>
-
     <br>
-
     <footer>
-        <span id="visits"><img src="./assets/imgs/visits.svg" alt="visits-icon" class="svg">访问量加载中……</span>
+        <i class="fa fa-eye"></i><span id="site-stats-display">访问量加载中……</span>
     </footer>
 </body>
 
-</html>
 
+
+</html>
