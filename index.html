@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肆鸠的主页 Neo</title>
 
-    <script src="./assets/js/ciallo.js"></script>
-    <script src="./assets/js/danmaku.js"></script>
-    <script src="./assets/js/steamStats.js"></script>
-    <script src="./assets/js/siteStats.js"></script>
+    <script src="./assets/js/min/ciallo.js"></script>
+    <script src="./assets/js/min/danmaku.js"></script>
+    <script src="./assets/js/min/steamStats.js"></script>
+    <script src="./assets/js/min/siteStats.js"></script>
     <!-- <script defer src="https://cloud.umami.is/script.js"
         data-website-id="b82c7090-848f-4d4d-a053-f9a2f5f79474"></script> -->
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/mBtns.css">
-    <link rel="stylesheet" href="./assets/css/danmaku.css">
+    <link rel="stylesheet" href="./assets/css/min/style.css">
+    <link rel="stylesheet" href="./assets/css/min/mBtns.css">
+    <link rel="stylesheet" href="./assets/css/min/danmaku.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./assets/css/fa6-all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@latest/dist/Meting.min.js"></script>
 </head>
 
 <body>
@@ -46,6 +50,10 @@
                 <span class="title"><i class="fa-solid fa-circle-info"></i> 关于我</span><br>
                 一个每天不知道在干些什么的畜中牲<br>
             </div>
+            <!-- <div class="card">
+                <meting-js server="netease" type="playlist" id="14175652304">
+                </meting-js>
+            </div> -->
         </div>
 
         <div class="rightPanel">
@@ -135,7 +143,6 @@
                 <hr>
                 <div>
                     <div class="front">14/9/2025<br>V1.1.0</div>
-
                     <div class="text">
                         新增：赞助列表<br>
                         新增：标题前面加入了图标<br>

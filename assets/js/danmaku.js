@@ -39,5 +39,5 @@ function createDanmaku(danmakuTexts) {
     // 动画结束后移除弹幕
     setTimeout(function () {
         danmaku.remove();
-    }, 20000);  // 动画时间
+    }, 18000);  // 动画时间
 }

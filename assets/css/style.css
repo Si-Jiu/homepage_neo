@@ -1,3 +1,6 @@
+@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.min.css")
+(prefers-color-scheme: dark);
+
 body {
     margin: 0;
 }
