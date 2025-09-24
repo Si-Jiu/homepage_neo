@@ -4,8 +4,7 @@
     font-size: x-large;
     border-radius: 12.5px;
     padding: 0 5px 5px 5px;
-    margin: 5px;
-    
+    margin: 8px;
 
     transition: 250ms;
 }
@@ -21,12 +20,28 @@
 }
 
 .mBtn#Steam:hover {
-    background: linear-gradient(to right, #121b2e, #0179ad);
+    /* background: linear-gradient(to bottom, #121b30, #0179ad); */
+    background-color: #1b2838;
+    animation: steamA linear;
+}
+
+.mBtn#Email:hover {
+    color: #fff;
+    background-color: deepskyblue;
 }
 
 @media (prefers-color-scheme: dark) {
     .mBtn {
         color: #fff;
         background-color: #10101050;
+    }
+}
+
+@keyframes steamA {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

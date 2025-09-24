@@ -1,6 +1,6 @@
 (function (global) {
     const cacheKey = "umami-share-cache";
-    const cacheTTL = 3600_000; // 1h
+    const cacheTTL = 3600000; // 1h
 
     async function fetchShareData(baseUrl, shareId) {
         const cached = localStorage.getItem(cacheKey);

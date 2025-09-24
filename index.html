@@ -1,53 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肆鸠的主页 Neo</title>
-    <script src="./assets/js/min/ciallo.js"></script>
-    <script src="./assets/js/min/danmaku.js"></script>
-    <script src="./assets/js/min/steamStats.js"></script>
-    <script src="./assets/js/min/siteStats.js"></script>
+    <!-- <script src="./assets/js/ciallo.js"></script>
+    <script src="./assets/js/danmaku.js"></script>
+    <script src="./assets/js/steamStats.js"></script>
+    <script src="./assets/js/siteStats.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mBtns.css">
+    <link rel="stylesheet" href="./assets/css/danmaku.css"> -->
+
+    <script src="./assets/js/ciallo.min.js"></script>
+    <script src="./assets/js/danmaku.min.js"></script>
+    <script src="./assets/js/steamStats.min.js"></script>
+    <script src="./assets/js/siteStats.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <link rel="stylesheet" href="./assets/css/mBtns.min.css">
+    <link rel="stylesheet" href="./assets/css/danmaku.min.css">
+
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="b82c7090-848f-4d4d-a053-f9a2f5f79474"></script>
     <script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/meting@latest/dist/Meting.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/min/style.css">
-    <link rel="stylesheet" href="./assets/css/min/mBtns.css">
-    <link rel="stylesheet" href="./assets/css/min/danmaku.css">
-    <link rel="stylesheet" href="./assets/css/fa6-all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css">
+    <link rel="stylesheet" href="./assets/css/fa6-all.min.css">
 </head>
+
 <body>
     <video src="./assets/videos/background.mp4" class="backgroundVid" autoplay muted loop></video>
     <div class="main">
-        <div class="leftPanel">
-            <div class="card">
-                <img src="./assets/imgs/avatar.webp" alt="avatar" class="avatar">
-                <span class="title">肆鸠</span>
-                <br>
-                <span class="brief">Ciallo～(∠・ω&lt; )⌒☆</span>
-                <br>
-                <br>
-                <span class="boardtext">Steam状态：<span id="steamOnline">-</span></span><br>
-                <a id="playingGame" class="boardtext" target="_blank"></a>
-                <br>
-                <a href="https://github.com/Si-Jiu" target="_blank" class="mBtn" id="Github"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://space.bilibili.com/443950222" target="_blank" class="mBtn" id="Bilibili"><i
-                        class="fa-brands fa-bilibili"></i></a>
-                <a href="https://steamcommunity.com/id/SiJiu49" target="_blank" class="mBtn" id="Steam"><i
-                        class="fa-brands fa-steam"></i></a>
-            </div>
-            <div class="card">
-                <span class="title"><i class="fa-solid fa-circle-info"></i> 关于我</span><br>
-                一个每天不知道在干些什么的畜中牲<br>
-            </div>
-            <!-- <div class="card">
-                <meting-js server="netease" type="playlist" id="14175652304">
-                </meting-js>
-            </div> -->
-        </div>
         <div class="rightPanel">
             <h1>欢迎来到 主页 <span class="gradient-text">Neo</span> 版</h1>
             <span class="title"><i class="fa-solid fa-bullhorn"></i>公告栏</span>
@@ -111,7 +95,7 @@
             <span class="title"><i class="fa-solid fa-book-bookmark"></i>资料<span class="sub">看到什么加什么</span>
             </span>
             <br>
-            <div class="background">
+            <div class="background" style="grid-template-columns:1fr">
                 <a href="https://www.bilibili.com/video/BV1CWb5zNE8w/" target="_blank" class="btn">VSCode&Mingw入坑教程</a>
                 <a href="https://www.bilibili.com/video/BV1YXtZzgE2r/" target="_blank" class="btn">VSCode&Mingw退坑教程</a>
                 <a href="https://www.ruanyifeng.com/blogimg/asset/201105/free_software_licenses.png" target="_blank"
@@ -128,12 +112,20 @@
                 </div>
                 <hr>
                 <div>
-                    <div class="front">14/9/2025<br>V1.1.0</div>
+                    <div class="front">24/9/2025<br>V1.1.0</div>
                     <div class="text">
                         新增：赞助列表<br>
                         新增：标题前面加入了图标<br>
                         修复：按钮大概率不会再抽风了<br>
                         <br>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <div class="front">14/9/2025<br>V1.1.1</div>
+                    <div class="text">
+                        优化：现在按钮应该不会乱蹦了<br>
+                        优化：css和js文件现在都经过minify<br>
                     </div>
                 </div>
                 <!-- <hr>
@@ -223,10 +215,40 @@
                     </div> -->
             </div>
         </div>
+        <div class="leftPanel">
+            <div class="card">
+                <img src="./assets/imgs/avatar.webp" alt="avatar" class="avatar">
+                <span class="title">肆鸠</span>
+                <br>
+                <span class="brief">Ciallo～(∠・ω&lt; )⌒☆</span>
+                <br>
+                <br>
+                <span class="boardtext">Steam状态：<span id="steamOnline">-</span></span><br>
+                <a id="playingGame" class="boardtext" target="_blank"></a>
+                <br>
+                <a href="https://github.com/Si-Jiu" target="_blank" class="mBtn" id="Github"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://space.bilibili.com/443950222" target="_blank" class="mBtn" id="Bilibili"><i
+                        class="fa-brands fa-bilibili"></i></a>
+                <a href="https://steamcommunity.com/id/SiJiu49" target="_blank" class="mBtn" id="Steam"><i
+                        class="fa-brands fa-steam"></i></a>
+                <a href="mailto:si_jiu49@sijiu49.us.kg" target="_blank" class="mBtn" id="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="card">
+                <span class="title"><i class="fa-solid fa-circle-info"></i> 关于我</span><br>
+                一个每天不知道在干些什么的畜中牲<br>
+            </div>
+            <!-- <div class="card">
+                <meting-js server="netease" type="playlist" id="14175652304">
+                </meting-js>
+            </div> -->
+        </div>
     </div>
     <br>
     <footer>
         <i class="fa fa-eye"></i> <span id="site-stats-display">访问量加载中……</span>
     </footer>
 </body>
+
 </html>
