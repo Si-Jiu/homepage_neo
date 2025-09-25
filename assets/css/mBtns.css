@@ -1,3 +1,10 @@
+.leftPanel .mBtns {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .mBtn {
     color: #000000;
     background-color: #ffffff55;

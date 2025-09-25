@@ -1,4 +1,5 @@
-@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.min.css") (prefers-color-scheme: dark);
+@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.css")
+(prefers-color-scheme: dark);
 
 body {
     margin: 0;
@@ -118,8 +119,15 @@ a#playingGame {
     display: inline-block;
 }
 
+.rightPanel .board .qrCode {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .rightPanel .board .qrCode img {
-    width: calc(24%);
+    display: inline-block;
+    border-radius: 25px;
+    width: calc(100%);
 }
 
 .rightPanel .board .text {
@@ -176,11 +184,8 @@ a#playingGame {
     padding-right: auto;
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #0065ff, #00ffff);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+#afd {
+    border-radius: 25px;
 }
 
 footer {
@@ -193,6 +198,13 @@ footer {
     backdrop-filter: blur(5px);
 }
 
+.gradient-text {
+    background: linear-gradient(to right, #0065ff, #00ffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 @media screen and (max-width: 1000px) {
     .main {
         width: 90%;
@@ -203,6 +215,10 @@ footer {
         width: 100%;
 
         margin-top: 100px;
+    }
+
+    .leftPanel .avatar {
+        width: 50%;
     }
 
     .rightPanel {
