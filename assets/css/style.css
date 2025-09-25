@@ -1,5 +1,4 @@
-@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.min.css")
-(prefers-color-scheme: dark);
+@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.min.css") (prefers-color-scheme: dark);
 
 body {
     margin: 0;
@@ -101,6 +100,7 @@ a#playingGame {
     background-color: #f0f0f075;
     backdrop-filter: blur(5px);
 }
+
 .rightPanel .title i {
     padding-bottom: 10px;
 }
@@ -212,6 +212,10 @@ footer {
 
     .rightPanel .board {
         text-align: left;
+    }
+
+    .background {
+        grid-template-columns: 1fr;
     }
 
     .background {
