@@ -180,6 +180,7 @@ a#playingGame {
     background: linear-gradient(to right, #0065ff, #00ffff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 footer {
