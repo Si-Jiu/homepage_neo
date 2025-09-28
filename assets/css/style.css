@@ -1,16 +1,6 @@
-@import url("https://gcore.jsdelivr.net/gh/seiki-yui/APlayer-DarkMode/APlayer.dark.css") (prefers-color-scheme: dark);
-
 body {
     margin: 0;
-}
-
-i {
-    padding: 5px;
-    vertical-align: middle;
-}
-
-.fa-circle-info {
-    padding-top: 0px;
+    overflow-x: hidden;
 }
 
 a#playingGame {
@@ -36,14 +26,25 @@ a#playingGame {
     height: auto;
 }
 
+@keyframes introLeftPanel {
+    from {
+        transform: translateX(-115%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 .leftPanel {
     position: fixed;
     top: 40px;
     left: 12.5%;
-    width: calc(15%);
+    width: 15%;
 
     font-size: larger;
     font-weight: normal;
+
+    animation: introLeftPanel 800ms;
 }
 
 .leftPanel .card {
@@ -58,7 +59,7 @@ a#playingGame {
 }
 
 .leftPanel .avatar {
-    width: calc(100%);
+    width: 100%;
     border-radius: 25px;
 }
 
@@ -71,14 +72,27 @@ a#playingGame {
     color: gray;
 }
 
+@keyframes introRightPanel {
+    0% {
+        transform: translateX(20%);
+        /* opacity: 0; */
+    }
+    100% {
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+
 .rightPanel {
     position: relative;
-    left: calc(25%);
-    width: calc(75%);
-    top: calc(15px);
+    left: 25%;
+    width: 75%;
+    top: 15px;
 
     font-size: x-large;
     font-weight: normal;
+
+    animation: introRightPanel 800ms;
 }
 
 .rightPanel h1 {

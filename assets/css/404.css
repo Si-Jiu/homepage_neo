@@ -19,7 +19,7 @@
     border-radius: 25px;
     top: 5vh;
     left: 5vw;
-    font-size: 80px;
+    font-size: xx-large;
 }
 
 img {
@@ -35,8 +35,8 @@ img {
 
     text-align: center;
     text-decoration: none;
-    font-weight: 900;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: xx-large;
 
     background-color: #f0f0f075;
     color: #000000;
@@ -50,4 +50,10 @@ img {
     color: #000000;
     padding-left: auto;
     padding-right: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+        width: 100%;
+    }
 }
