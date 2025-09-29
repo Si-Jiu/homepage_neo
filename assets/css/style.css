@@ -209,7 +209,7 @@ footer {
     left: 0;
     bottom: 0;
     text-align: center;
-    background-color: #10101050;
+    background-color: #ffffff50;
     backdrop-filter: blur(5px);
 }
 
@@ -304,7 +304,12 @@ footer {
         color: white;
     }
 
+    #giscus {
+        background-color: #10101075;
+    }
+
     footer {
         color: #fff;
+        background-color: #10101025;
     }
 }
