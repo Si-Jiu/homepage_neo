@@ -9,7 +9,7 @@ function getRandomColor() {
 }
 
 // 弹幕显示
-function createDanmaku(danmakuTexts) {
+function createDanmaku(danmakuTexts, duration = 0) {
     const randomText = danmakuTexts[Math.floor(Math.random() * danmakuTexts.length)];
     var danmaku = document.createElement('div');
     danmaku.classList.add('danmaku');
@@ -27,8 +27,14 @@ function createDanmaku(danmakuTexts) {
     const topPosition = Math.floor(Math.random() * (window.innerHeight - fontSize)) + fontSize / 2;
     danmaku.style.top = `${topPosition}px`;
 
+    var animationDuration;
     // 随机动画速度
-    const animationDuration = Math.floor(Math.random() * 8) + 5; // 5s 到 15s 随机时间
+    if (duration === 0) {
+        animationDuration = Math.floor(Math.random() * 8) + 5; // 5s 到 15s 随机时间
+    }
+    else {
+        animationDuration = duration;
+    }
     danmaku.style.animationDuration = `${animationDuration}s`;
 
     document.body.appendChild(danmaku);
@@ -39,5 +45,5 @@ function createDanmaku(danmakuTexts) {
     // 动画结束后移除弹幕
     setTimeout(function () {
         danmaku.remove();
-    }, 18000);  // 动画时间
+    }, animationDuration * 1000);  // 动画时间
 }
