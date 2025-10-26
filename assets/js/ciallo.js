@@ -1,11 +1,6 @@
 danmakuList = [
     'Ciallo～(∠・ω< )⌒★',
-    'Ciallo～(∠・ω< )⌒★',
-    'Ciallo～(∠・ω< )⌒★',
-    'Ciallo～(∠・ω< )⌒★',
     '恰喽～(∠・ω< )⌒★',
-    '恰喽～(∠・ω< )⌒★',
-    '柚子厨真恶心🤮',
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             createDanmaku(danmakuList, music.duration + 2);
         });
         cialloIndex++;
-        if (cialloIndex >= 28) {
+        if (cialloIndex >= 29) {
             cialloIndex = 1;
         }
     });
