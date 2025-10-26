@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             createDanmaku(danmakuList, music.duration + 2);
         });
         cialloIndex++;
-        if (cialloIndex >= 29) {
+        if (cialloIndex > 29) {
             cialloIndex = 1;
         }
     });
