@@ -139,9 +139,14 @@ document.addEventListener('DOMContentLoaded', function () {
         music.addEventListener("loadedmetadata", () => {
             music.play();
             createDanmaku(danmakuList, music.duration);
-            createSubtitle(subtitles[cialloIndex].name, 'default', subtitles[cialloIndex].sentence, music.duration);
             if (cialloIndex === 29) {
                 createSubtitle("背景中的因幡巡", 'black', "Ciallo～(∠・ω< )⌒☆", 1);
+                setTimeout(function () {
+                    createSubtitle(subtitles[cialloIndex].name, 'default', subtitles[cialloIndex].sentence, music.duration);
+                }, 1000)
+            }
+            else {
+                createSubtitle(subtitles[cialloIndex].name, 'default', subtitles[cialloIndex].sentence, music.duration);
             }
         });
         // cialloIndex++;
