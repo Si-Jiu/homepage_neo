@@ -30,8 +30,9 @@ a#playingGame {
 
 @keyframes introLeftPanel {
     from {
-        transform: translateX(-115%);
+        transform: translateX(-25vw);
     }
+
     to {
         transform: translateX(0);
     }
@@ -76,11 +77,14 @@ a#playingGame {
 
 @keyframes introRightPanel {
     0% {
-        transform: translateX(20%);
+        scale: 0;
+        /* transform: translateX(5vh); */
         /* opacity: 0; */
     }
+
     100% {
-        transform: translateX(0);
+        scale: 1;
+        /* transform: translateX(0); */
         /* opacity: 1; */
     }
 }
@@ -93,14 +97,13 @@ a#playingGame {
 
     font-size: x-large;
     font-weight: normal;
-
-    animation: introRightPanel 800ms;
 }
 
 .rightPanel h1 {
     font-size: 60px;
     font-weight: bolder;
     height: fit-content;
+    animation: introRightPanel 800ms;
 }
 
 .rightPanel .title {
@@ -115,6 +118,7 @@ a#playingGame {
 
     background-color: #f0f0f075;
     backdrop-filter: blur(5px);
+    animation: introRightPanel 800ms;
 }
 
 .rightPanel .title i {
@@ -175,6 +179,7 @@ a#playingGame {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    animation: introRightPanel 800ms;
     /* gap: 100px; */
 }
 
