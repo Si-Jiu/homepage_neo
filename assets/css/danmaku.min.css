@@ -1,1 +1,1 @@
-@keyframes moveDanmaku{0%{transform:translateX(100vw)}100%{transform:translateX(-50vw)}}.danmaku{position:fixed;white-space:nowrap;opacity:1;animation:moveDanmaku linear forwards;user-select:none}
+@keyframes moveDanmaku{0%{transform:translateX(100vw)}100%{transform:translateX(-15vw)}}.danmaku{position:fixed;white-space:nowrap;opacity:1;animation:moveDanmaku linear forwards;user-select:none}

@@ -16,7 +16,7 @@ function createDanmaku(danmakuTexts, duration = 0) {
     danmaku.textContent = randomText;
 
     // 随机字体大小
-    const fontSize = Math.floor(Math.random() * 15) + 15;  // 随机字体大小 15px 到 30px
+    const fontSize = Math.floor(Math.random() * 20) + 15;  // 随机字体大小 15px 到 30px
     danmaku.style.fontSize = `${fontSize}px`;
 
     // 设置随机颜色
@@ -24,7 +24,7 @@ function createDanmaku(danmakuTexts, duration = 0) {
     danmaku.style.color = color;
 
     // 随机纵向位置
-    const topPosition = Math.floor(Math.random() * (window.innerHeight - fontSize)) + fontSize / 2;
+    const topPosition = Math.floor(Math.random() * (window.innerHeight - fontSize * 1.5));
     danmaku.style.top = `${topPosition}px`;
 
     var animationDuration;

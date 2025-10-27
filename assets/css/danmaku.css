@@ -3,7 +3,7 @@
         transform: translateX(100vw);
     }
     100% {
-        transform: translateX(-50vw);
+        transform: translateX(-15vw);
     }
 }
 .danmaku {
