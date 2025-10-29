@@ -3,122 +3,136 @@ const danmakuList = [
     '恰喽～(∠・ω< )⌒★',
 ];
 
+const charactersName = [
+    "因幡巡",
+    "椎叶䌷",
+    "绫地宁宁",
+    "朝武芳乃",
+    "式部茉优",
+];
+const charactersColor = [
+    "#FFAF93",
+    "#D5B6B1",
+    "#FCF9FC",
+    "#FDFCFF",
+    "#B5CDC7",
+];
 const subtitles = [
     {},
     {
-        "name": "朝武芳乃",
+        "chid": 3,
         "sentence": "有地，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，学姐！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆保科学长，宁宁学姐"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，学长，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，保科学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "椎叶䌷",
+        "chid": 1,
         "sentence": "小巡Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "宁宁学姐，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，宁宁学姐！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆。川上，保科学长"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，保科学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆宁宁学姐，保科学长，差点就和你们错过了"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊……Cia、Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "绫地宁宁",
+        "chid": 2,
         "sentence": "……嗯，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "Ciallo～(∠・ω< )⌒☆——！"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "宁宁学姐，䌷学姐，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "椎叶䌷",
+        "chid": 1,
         "sentence": "哈哈，Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，䌷学姐！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "椎叶䌷",
+        "chid": 1,
         "sentence": "Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "因幡巡",
+        "chid": 0,
         "sentence": "啊，保科学长！Ciallo～(∠・ω< )⌒☆"
     },
     {
-        "name": "式部茉优",
+        "chid": 4,
         "sentence": "Ciallo～(∠・ω< )⌒☆ 怎么样 青春吧！！！"
     },
 ];
@@ -129,29 +143,33 @@ document.addEventListener('DOMContentLoaded', function () {
     var lastIndex = -1;
     var cialloIndex;
     playBtn.addEventListener('click', function () {
-        do {
-            cialloIndex = Math.max(1, Math.min(Math.floor(Math.random() * indexMax) + 1, indexMax));
-        } while (cialloIndex === lastIndex);
-        lastIndex = cialloIndex;
-        // cialloIndex = 29; // debug
-        const music = new Audio(`./assets/sounds/Ciallo-${cialloIndex}.wav`);
-        music.volume = 0.5;
-        music.addEventListener("loadedmetadata", () => {
+        if (document.getElementsByClassName('subtitleList')[0].childNodes.length > 10) {
+            window.alert("太，太快了啦~");
+        } else {
+            do {
+                cialloIndex = Math.max(1, Math.min(Math.floor(Math.random() * indexMax) + 1, indexMax));
+            } while (cialloIndex === lastIndex);
+            lastIndex = cialloIndex;
+            // cialloIndex = 29; // debug
+            const music = new Audio(`./assets/sounds/Ciallo-${cialloIndex}.wav`);
+            music.volume = 0.5;
             music.play();
-            createDanmaku(danmakuList, music.duration);
-            if (cialloIndex === 29) {
-                createSubtitle("背景中的因幡巡", 'black', "Ciallo～(∠・ω< )⌒☆", 1);
-                setTimeout(function () {
-                    createSubtitle(subtitles[cialloIndex].name, 'default', subtitles[cialloIndex].sentence, music.duration);
-                }, 1000)
-            }
-            else {
-                createSubtitle(subtitles[cialloIndex].name, 'default', subtitles[cialloIndex].sentence, music.duration);
-            }
-        });
-        // cialloIndex++;
-        // if (cialloIndex > 29) {
-        //     cialloIndex = 1;
-        // }
+            music.addEventListener("loadedmetadata", () => {
+                createDanmaku(danmakuList, music.duration);
+                if (cialloIndex === 29) {
+                    createSubtitle("背景中的因幡巡", "#FFAF93", "Ciallo～(∠・ω< )⌒☆", 1);
+                    setTimeout(function () {
+                        createSubtitle(charactersName[subtitles[cialloIndex].chid], charactersColor[subtitles[cialloIndex].chid], subtitles[cialloIndex].sentence, music.duration);
+                    }, 1000)
+                }
+                else {
+                    createSubtitle(charactersName[subtitles[cialloIndex].chid], charactersColor[subtitles[cialloIndex].chid], subtitles[cialloIndex].sentence, music.duration);
+                }
+            });
+            // cialloIndex++;
+            // if (cialloIndex > 29) {
+            //     cialloIndex = 1;
+            // }
+        }
     });
 });
