@@ -73,6 +73,7 @@ a#playingGame {
 
 .leftPanel .brief {
     color: gray;
+    font-size: large;
 }
 
 @keyframes introRightPanel {
