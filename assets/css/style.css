@@ -76,6 +76,43 @@ a#playingGame {
     font-size: large;
 }
 
+.leftPanel .musicPlayer {
+    text-align: left;
+    vertical-align: top;
+}
+
+.leftPanel .musicPlayer .cover {
+    width: 100%;
+    border-radius: 1em;
+}
+
+.leftPanel .musicPlayer .musicInfo {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.leftPanel .musicPlayer .infoTexts {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.leftPanel .musicPlayer progress {
+    width: 100%;
+}
+
+.leftPanel .musicPlayer .control {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1rem;
+}
+
 @keyframes introRightPanel {
     0% {
         scale: 0;
@@ -208,6 +245,14 @@ a#playingGame {
     padding-left: auto;
     padding-right: auto;
 }
+
+.btnSmall {
+    padding: 5px 0px;
+    /* padding: 0; */
+    border-radius: .5rem;
+    margin: 5px;
+}
+
 
 #afd {
     border-radius: 25px;

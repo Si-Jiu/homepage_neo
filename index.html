@@ -11,6 +11,7 @@
     <script defer src="./assets/js/steamStats.js"></script>
     <script defer src="./assets/js/countdown.js"></script>
     <script defer src="./assets/js/subtitle.js"></script>
+    <script defer src="./assets/js/musicPlayer.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/mBtns.css">
     <link rel="stylesheet" href="./assets/css/danmaku.css">
@@ -21,6 +22,7 @@
     <script src="./assets/js/subtitle.min.js"></script>
     <script defer src="./assets/js/steamStats.min.js"></script>
     <script defer src="./assets/js/countdown.min.js"></script>
+    <script defer src="./assets/js/musicPlayer.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="stylesheet" href="./assets/css/mBtns.min.css">
     <link rel="stylesheet" href="./assets/css/danmaku.min.css">
@@ -124,6 +126,13 @@
                     </div>
                 </div>
                 <hr> -->
+                <div>
+                    <div class="front">3/11/2025<br>V1.7.0</div>
+                    <div class="text">
+                        新增：音乐播放器<br>
+                    </div>
+                </div>
+                <hr>
                 <div>
                     <div class="front">29/10/2025<br>V1.6.2</div>
                     <div class="text">
@@ -389,6 +398,24 @@
             <div class="card">
                 <span class="title"><i class="fa-solid fa-circle-info"></i> 关于我</span><br>
                 一个每天不知道在干些什么的畜中牲<br>
+            </div>
+            <div class="card musicPlayer" id="musicPlayer">
+                <div class="musicInfo">
+                    <img src="./assets/imgs/avatar.webp" alt="cover" class="cover" id="cover">
+                    <div class="infoTexts">
+                        <div class="musicTitle" id="musicTitle">Title</div>
+                        <div class="musicAuthor" id="musicAuthor">Author</div>
+                    </div>
+                </div>
+                <!-- <progress id="musicProgress" value="0" max="100"></progress> -->
+                <div class="control">
+                    <a class="btn btnSmall" type="button" href="javascript:preMusic()"><i
+                            class="fa-solid fa-backward"></i></a>
+                    <a class="btn btnSmall" type="button" href="javascript:stopStartMusic()"><i
+                            class="fa-solid fa-pause" id="pauseButton"></i></a>
+                    <a class="btn btnSmall" type="button" href="javascript:nextMusic()"><i
+                            class="fa-solid fa-forward"></i></a>
+                </div>
             </div>
         </div>
     </div>
