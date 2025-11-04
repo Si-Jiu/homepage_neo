@@ -137,12 +137,19 @@ const subtitles = [
     },
 ];
 
+let clicked = 0;
+
 document.addEventListener('DOMContentLoaded', function () {
     const playBtn = document.getElementById('cialloBtn');
     const indexMax = 29;
     var lastIndex = -1;
     var cialloIndex;
     playBtn.addEventListener('click', function () {
+        if (!clicked) {
+            clicked = 1;
+            playingNow.pause();
+            loadPlayer("netease", "playlist", 14296837053);
+        }
         if (document.getElementsByClassName('subtitleList')[0].childNodes.length > 10) {
             window.alert("太，太快了啦~");
         } else {
