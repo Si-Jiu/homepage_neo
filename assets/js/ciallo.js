@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 1000)
                 }
                 else {
-                    createSubtitle(charactersName[subtitles[cialloIndex].chid], charactersColor[subtitles[cialloIndex].chid], subtitles[cialloIndex].sentence, music.duration);
+                    createSubtitle(charactersName[4], charactersColor[4], "Ciallo～(∠・ω< )⌒☆ 怎么样 青春吧！！！", music.duration);
                 }
             });
             // cialloIndex++;
