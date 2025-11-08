@@ -157,6 +157,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 cialloIndex = Math.max(1, Math.min(Math.floor(Math.random() * indexMax) + 1, indexMax));
             } while (cialloIndex === lastIndex);
             lastIndex = cialloIndex;
+            let name = charactersName[subtitles[cialloIndex].chid];
+            let color = charactersColor[subtitles[cialloIndex].chid];
+            let subtitle = subtitles[cialloIndex.sentence];
             // cialloIndex = 29; // debug
             const music = new Audio(`./assets/sounds/Ciallo-${cialloIndex}.wav`);
             music.volume = 0.5;
@@ -166,11 +169,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (cialloIndex === 29) {
                     createSubtitle("背景中的因幡巡", "#FFAF93", "Ciallo～(∠・ω< )⌒☆", 1);
                     setTimeout(function () {
-                        createSubtitle(charactersName[4], charactersColor[4], "Ciallo～(∠・ω< )⌒☆ 怎么样 青春吧！！！", music.duration);
+                        createSubtitle(name, color, sentence, music.duration);
                     }, 1000)
                 }
                 else {
-                    createSubtitle(charactersName[subtitles[cialloIndex].chid], charactersColor[subtitles[cialloIndex].chid], subtitles[cialloIndex].sentence, music.duration);
+                    createSubtitle(name, color, sentence, music.duration);
                 }
             });
             // cialloIndex++;
