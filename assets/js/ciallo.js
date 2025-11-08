@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (cialloIndex === 29) {
                     createSubtitle("背景中的因幡巡", "#FFAF93", "Ciallo～(∠・ω< )⌒☆", 1);
                     setTimeout(function () {
-                        createSubtitle(name, color, sentence, music.duration);
+                        createSubtitle(name, color, subtitle, music.duration);
                     }, 1000)
                 }
                 else {
-                    createSubtitle(name, color, sentence, music.duration);
+                    createSubtitle(name, color, subtitle, music.duration);
                 }
             });
             // cialloIndex++;
