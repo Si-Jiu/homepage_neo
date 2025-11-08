@@ -1,4 +1,4 @@
-let playList, playingIndex = 0, playingNow, musicStop = 0;
+let playList, playingIndex = 0, playingNow, musicStop = 0, volume = 50;
 
 const loadPlayer = async (server, type, id) => {
     const api = `https://api.i-meto.com/meting/api?server=${server}&type=${type}&id=${id}&r=${Math.random()}`;
@@ -19,6 +19,7 @@ function playMusic() {
     }
     playingNow = null;
     playingNow = new Audio(music?.url);
+    playingNow.volume = volume / 100;
     playingNow.addEventListener("pause", () => {
         document.getElementById("pauseButton").setAttribute("class", "fa-solid fa-play");
     });
